@@ -1,0 +1,227 @@
+:root {
+  --color-primary: rgb(91, 149, 15);
+  --color-white: rgb(255, 255, 255);
+  --color-blue: rgb(24, 89, 168);
+  --color-black-1: rgb(24, 13, 13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo-image img {
+  height: 50px; /* Adjust height as needed */
+}
+
+/* Adjust the container for the table */
+.table-container {
+  margin-top: 80px; /* Adjust margin to ensure it clears the navbar */
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+.background {
+  height: calc(100vh - 70px);
+}
+
+/*form css*/
+
+.login-box {
+  width: 360px;
+  height: 300px;
+  margin: auto;
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  margin-top: 100px;
+}
+
+.add-box {
+  width: 360px;
+  height: 530px;
+  margin: auto;
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+}
+
+form {
+  width: 300px;
+  margin-left: 30px;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+input[type="button"] {
+  width: 300px;
+  height: 35px;
+  margin-top: 20px;
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+/*icons*/
+
+.icon-container {
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  margin-left: 300px;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+/* Ensure navbar is fixed at the top and spans the full width */
+.menu_bar {
+  background-color: var(--color-blue);
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures the navbar stays on top */
+  padding: 0 20px; /* Optional: Adds some padding on the sides */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better separation from content */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Space out logo and menu items */
+  align-items: center;
+}
+
+/* Logo styling */
+.logo-image img {
+  height: 50px; /* Adjust height as needed */
+}
+
+/* Navbar links */
+.menu_bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu_bar ul li {
+  padding: 0 20px;
+  position: relative;
+}
+
+.menu_bar ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: all 0.3s;
+}
+
+.menu_bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-blue);
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu_bar ul li:hover .dropdown_menu {
+  display: block;
+}
+
+.dropdown_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown_menu ul li {
+  padding: 10px;
+}
+
+.dropdown_menu ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown_menu ul li a:hover {
+  background-color: var(--color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu_bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu_bar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu_bar ul li {
+    padding: 10px 0;
+  }
+
+  .dropdown_menu {
+    position: static;
+    box-shadow: none;
+  }
+}
